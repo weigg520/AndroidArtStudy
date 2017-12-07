@@ -1,6 +1,7 @@
 package comt.example.a75213.myapplication.chapter01.activity_lift;
 
 import android.content.Intent;
+import android.content.res.Configuration;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
@@ -82,6 +83,7 @@ public class OneLiftActivity extends AppCompatActivity {
      */
 
 
+
     /**
      * 数据保存
      * @param outState
@@ -101,8 +103,18 @@ public class OneLiftActivity extends AppCompatActivity {
         super.onRestoreInstanceState(savedInstanceState);
         testonsave.setText(savedInstanceState.getString("extra_test"));
     }
-    //***********************************************************************************************************************
 
+    /**
+     *  当设置configChange="orientation"时 onSaveInstanceState、onRestoreInstanceState不会被调用，此方法会被调用
+     * @param newConfig
+     */
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        Log.e(TAG , "onConfigurationChanged");
+    }
+
+    //***********************************************************************************************************************
     /**
      * 内存不足杀死Activity优先级
      * 1、前台Activity ------正在和用户交互的优先级最高
