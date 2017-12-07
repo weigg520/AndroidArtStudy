@@ -17,4 +17,12 @@
         android:background="@drawable/bnt_back_shap"
         android:text="这是第一个Activity"
         />
+
+    <EditText
+        android:id="@+id/test_on_save"
+        android:layout_width="match_parent"
+        android:layout_height="38dp"
+        android:background="@drawable/bnt_back_shap"
+        android:gravity="center"
+        />
 </FrameLayout>

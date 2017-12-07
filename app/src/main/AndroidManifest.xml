@@ -16,7 +16,10 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
-        <activity android:name=".chapter01.activity_lift.OneLiftActivity">
+        <activity
+            android:name=".chapter01.activity_lift.OneLiftActivity"
+            android:configChanges="orientation|locale|keyboardHidden|screenSize"
+            >
         </activity>
         <activity android:name=".chapter01.activity_lift.TwoLiftActivity"/>
     </application>
