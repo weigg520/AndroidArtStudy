@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="comt.example.a75213.myapplication.chapter01.activity_launch_model.LaunchModelActivity">
+
+    <TextView
+        android:id="@+id/textTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/colorAccent"
+        android:textSize="18sp"
+        android:layout_marginTop="18dp"
+        android:text="Activity启动模式[LaunchModel]"
+        />
+
+    <TextView
+        android:id="@+id/textContent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="18dp"
+        android:gravity="center"
+        android:textSize="24sp"
+        android:background="@drawable/bnt_back_shap"
+        android:textColor="@color/colorPrimary"
+        tools:text="1、standard[标准] \n 2、singleTop[栈顶复用] \n 3、singleTask[栈内复用] \n4、单实例模式"
+        />
+
+</FrameLayout>

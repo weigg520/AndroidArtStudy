@@ -1,6 +1,7 @@
 package comt.example.a75213.myapplication.Main;
 
 import android.app.Activity;
+import android.app.LauncherActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -14,6 +15,7 @@ import java.util.List;
 import comt.example.a75213.myapplication.Main.Bean.MainBean;
 import comt.example.a75213.myapplication.Main.adapter.MainAdapter;
 import comt.example.a75213.myapplication.R;
+import comt.example.a75213.myapplication.chapter01.activity_launch_model.LaunchModelActivity;
 import comt.example.a75213.myapplication.chapter01.activity_lift.OneLiftActivity;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
@@ -45,7 +47,8 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
      */
     private void initData() {
         //生命周期
-        mMainList.add(getMainBean("android生命周期全面解析", OneLiftActivity.class));
+        mMainList.add(getMainBean("Activity生命周期全面解析", OneLiftActivity.class));
+        mMainList.add(getMainBean("Activity启动模式【LaunchModel】", LaunchModelActivity.class));
     }
 
     /**
