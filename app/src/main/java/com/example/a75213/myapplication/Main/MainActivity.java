@@ -1,7 +1,6 @@
-package comt.example.a75213.myapplication.Main;
+package com.example.a75213.myapplication.Main;
 
 import android.app.Activity;
-import android.app.LauncherActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -12,11 +11,12 @@ import android.widget.ListView;
 import java.util.ArrayList;
 import java.util.List;
 
-import comt.example.a75213.myapplication.Main.Bean.MainBean;
-import comt.example.a75213.myapplication.Main.adapter.MainAdapter;
-import comt.example.a75213.myapplication.R;
-import comt.example.a75213.myapplication.chapter01.activity_launch_model.LaunchModelActivity;
-import comt.example.a75213.myapplication.chapter01.activity_lift.OneLiftActivity;
+import com.example.a75213.myapplication.Main.Bean.MainBean;
+import com.example.a75213.myapplication.Main.adapter.MainAdapter;
+import com.example.a75213.myapplication.R;
+import com.example.a75213.myapplication.chapter01.activity_launch_model.LaunchModelActivity;
+import com.example.a75213.myapplication.chapter01.activity_lift.OneLiftActivity;
+import com.example.a75213.myapplication.chapter02.ipc.IPCActivity;
 
 public class MainActivity extends AppCompatActivity implements AdapterView.OnItemClickListener {
     private static final String TAG = MainActivity.class.getSimpleName();
@@ -49,6 +49,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         //生命周期
         mMainList.add(getMainBean("Activity生命周期全面解析", OneLiftActivity.class));
         mMainList.add(getMainBean("Activity启动模式【LaunchModel】", LaunchModelActivity.class));
+        mMainList.add(getMainBean("开启多进程模式", IPCActivity.class));
     }
 
     /**

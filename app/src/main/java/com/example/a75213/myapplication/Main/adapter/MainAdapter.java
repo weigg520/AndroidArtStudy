@@ -1,4 +1,4 @@
-package comt.example.a75213.myapplication.Main.adapter;
+package com.example.a75213.myapplication.Main.adapter;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -7,10 +7,11 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+import com.example.a75213.myapplication.Main.Bean.MainBean;
+
 import java.util.List;
 
-import comt.example.a75213.myapplication.Main.Bean.MainBean;
-import comt.example.a75213.myapplication.R;
+import com.example.a75213.myapplication.R;
 
 /**
  * Created by 75213 on 2017/12/6.

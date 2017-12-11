@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="comt.example.a75213.myapplication.chapter01.activity_launch_model.LaunchModelActivity">
+    tools:context="comt.example.a75213.myapplication.com.example.a75213.myapplication.chapter01.activity_launch_model.LaunchModelActivity">
 
     <TextView
         android:id="@+id/textTitle"

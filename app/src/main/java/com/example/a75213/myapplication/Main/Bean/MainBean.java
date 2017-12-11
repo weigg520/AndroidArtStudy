@@ -1,4 +1,4 @@
-package comt.example.a75213.myapplication.Main.Bean;
+package com.example.a75213.myapplication.Main.Bean;
 
 import android.app.Activity;
 

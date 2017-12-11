@@ -1,4 +1,4 @@
-package comt.example.a75213.myapplication.chapter01.activity_lift;
+package com.example.a75213.myapplication.chapter01.activity_lift;
 
 import android.content.Intent;
 import android.content.res.Configuration;
@@ -9,7 +9,7 @@ import android.view.View;
 import android.widget.EditText;
 import android.widget.TextView;
 
-import comt.example.a75213.myapplication.R;
+import com.example.a75213.myapplication.R;
 
 /**
  * Activity生命周期

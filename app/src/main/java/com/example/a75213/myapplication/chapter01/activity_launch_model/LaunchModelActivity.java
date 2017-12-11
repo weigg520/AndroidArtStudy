@@ -1,4 +1,4 @@
-package comt.example.a75213.myapplication.chapter01.activity_launch_model;
+package com.example.a75213.myapplication.chapter01.activity_launch_model;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -7,8 +7,10 @@ import android.util.Log;
 import android.view.View;
 import android.widget.TextView;
 
-import comt.example.a75213.myapplication.Main.MainActivity;
-import comt.example.a75213.myapplication.R;
+import com.example.a75213.myapplication.R;
+
+import java.text.SimpleDateFormat;
+import java.util.Date;
 
 /**
  * 描述:Android 分四种启动模式
@@ -39,7 +41,10 @@ public class LaunchModelActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(LaunchModelActivity.this,LaunchModelActivity.class);
-                intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
+                SimpleDateFormat formatter = new SimpleDateFormat("yyyy年MM月dd日HH时mm分ss秒");
+                Date date = new Date(System.currentTimeMillis());
+                intent.putExtra("time" ,formatter.format(date) );
+                //intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);
                 startActivity(intent);
             }
         });
@@ -48,7 +53,7 @@ public class LaunchModelActivity extends AppCompatActivity {
     @Override
     protected void onNewIntent(Intent intent) {
         super.onNewIntent(intent);
-        Log.e(TAG , "onNewIntent");
+        Log.e(TAG , "onNewIntent time = " + intent.getStringExtra("time"));
     }
 
     @Override
