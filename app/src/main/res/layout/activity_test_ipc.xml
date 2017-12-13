@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     android:layout_width="match_parent"
@@ -7,11 +7,19 @@
     <TextView
         android:id="@+id/test_static"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="wrap_content"
         android:textStyle="bold"
         android:gravity="center"
         android:textSize="180sp"
         tools:text="2"
         />
+    <Button
+        android:id="@+id/test_ipc_bnt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center_horizontal"
+        android:onClick="testIPC"
+        android:text="发送"
+        />
 
-</LinearLayout>
+</FrameLayout>

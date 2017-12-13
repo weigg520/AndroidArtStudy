@@ -39,6 +39,10 @@
             ></activity>
         <!--进程通信测试-->
         <activity android:name=".chapter02.TestIPCActivity"/>
+        <service
+            android:name=".chapter02.ipc.MessengerService"
+            android:process=":remote"
+            />
     </application>
 
 </manifest>
