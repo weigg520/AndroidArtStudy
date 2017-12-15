@@ -16,6 +16,7 @@ import android.widget.TextView;
 
 import com.example.a75213.myapplication.Book;
 import com.example.a75213.myapplication.R;
+import com.example.a75213.myapplication.chapter02.aidi.AIDIBookActivity;
 import com.example.a75213.myapplication.chapter02.ipc.MessengerService;
 import com.example.a75213.myapplication.chapter02.ipc.UserManager;
 import com.example.a75213.myapplication.constant.Constant;
@@ -58,6 +59,7 @@ public class TestIPCActivity extends AppCompatActivity {
         Message msg = Message.obtain(null , Constant.MSG_FROM_CLIENT);
         Bundle data = new Bundle();
         data.putString("msg" , "hello , this is client");
+        //无法传递自定义对象【即使序列化也不成】
         //data.putParcelable("Book" , book);
         msg.setData(data);
         try {
@@ -65,6 +67,7 @@ public class TestIPCActivity extends AppCompatActivity {
         }catch (RemoteException e){
             e.printStackTrace();
         }
+        startActivity(new Intent(this , AIDIBookActivity.class));
     }
 
     @Override

@@ -6,7 +6,7 @@ import android.os.Parcelable;
 /**
  * Created by 75213 on 2017/12/13.
  */
-@SuppressWarnings("deprecation")
+
 public class Book implements Parcelable {
     public int bookId;
     public String bookName;

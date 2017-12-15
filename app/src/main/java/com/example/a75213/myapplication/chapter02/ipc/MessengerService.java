@@ -9,7 +9,6 @@ import android.os.Messenger;
 import android.support.annotation.Nullable;
 import android.util.Log;
 
-import com.example.a75213.myapplication.Book;
 import com.example.a75213.myapplication.constant.Constant;
 
 /**
@@ -18,6 +17,7 @@ import com.example.a75213.myapplication.constant.Constant;
 
 public class MessengerService extends Service {
     private static final String TAG = MessengerService.class.getSimpleName();
+
 
     private final Messenger mMessenger = new Messenger(new MessengerHandler());
 
@@ -28,8 +28,7 @@ public class MessengerService extends Service {
                 case Constant.MSG_FROM_CLIENT:
                     Log.e(TAG , "receive msg from Client:" + msg.getData());
                     Log.e(TAG , msg.getData().getString("msg"));
-                    //Book book = msg.getData().getParcelable("Book");
-                    //Log.e(TAG ,book.bookName);
+                    //Log.e(TAG ,((Book)(msg.getData().getParcelable("Book"))).bookName);
                     break;
                 default:
                     super.handleMessage(msg);

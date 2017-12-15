@@ -3,6 +3,7 @@ package com.example.a75213.myapplication;
 
 // Declare any non-default types here with import statements
 import com.example.a75213.myapplication.Book;
+import com.example.a75213.myapplication.IOnNewBookArrivedListener;
 
 interface IBookManager {
     /**
@@ -11,4 +12,6 @@ interface IBookManager {
      */
     List<Book> getBookList();
     void addBook(in Book book);
+    void registerLister(IOnNewBookArrivedListener listener);
+    void unregisterLister(IOnNewBookArrivedListener listener);
 }
